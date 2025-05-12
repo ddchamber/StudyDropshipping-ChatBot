@@ -1,0 +1,9 @@
+langchain
+langchain_community
+discord
+langchain_aws
+boto3
+python-dotenv
+nest_asyncio
+json
+faiss-cpu
