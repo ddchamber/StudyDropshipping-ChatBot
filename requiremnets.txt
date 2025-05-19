@@ -7,3 +7,5 @@ python-dotenv
 nest_asyncio
 json
 faiss-cpu
+pandas
+sentence_transformers
