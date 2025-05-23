@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "header": "autods",
+    "content": "﻿This section will be all about our supplier autods where i'll be explaining how to use the platform, get quotes, send orders, and take advantage of the tools they have on there. The main reason you will want to pay attention to this section is so that you know what to do once a customer places an order on your website. And while technically you could just skip ahead to the advertising sections and come back here once you are actually getting orders. I think most of you would like to be prepared for when that time comes, which is why I'm putting it here after the website build. So it's up to you if you want to follow along",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 2,
+    "header": "autods",
+    "content": "So if you have followed every step up to this point you should be signed up for autods with it already linked to your shopify store here. This is what we did when we used the AI to build our website but if for some reason you skipped that step. Just click the link below this video where it says Auto Ds Free Trial, sign up, and connect your store here in the top left. So",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 3,
+    "header": "autods",
+    "content": "to demonstrate this for you what i'll do is go on my website and actually purchase a product like a customer would. Which if you want to follow along step by step I recommend you do this as well. So i'm just gonna open up my finished website here, add to cart… and fill in all my details here. Then obviously i'm gonna click pay now and purchase the product from myself.",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 4,
+    "header": "autods",
+    "content": "coming back to autods when I click orders it is not there yet. So to fix this what im gonna do is click the pencil icon here, three dots, and actually delete the store from our autods page. But then immediately add it back in by clicking add store, shopify, continue, I have a store, and continue. This will automatically open up autods here and then bring it back to the autods website. You just have to let it load. But",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 5,
+    "header": "autods",
+    "content": "Right now it currently says unmonitored meaning there is no supplier attached to it so it can't get sent out. And to fix this just click here and then click add product. Right here where it says supplier source we want to select shopify here at the bottom. Then come back to shopify, click the eyeball to view our store, full details to get on the product page, and then copy this link. Come back to autods and simply paste it here and click add. I'm just going to match up all the different variants here black, pink, black + brown, and white plus brown and click connect. The order status should switch to pending and then on the left side we just want to come down to products. Click the 3 dots here, click sourcing request, and process sourcing request. Which now leaves the sourcing status in progress. So now the team at autods will search for you to find the best possible supplier for your product. They are looking for the lowest price, highest quality, and fastest shipping. This process will take anywhere from 1-3 days for them to give you a quote so i'll be back to update you guys when it's done.",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 6,
+    "header": "autods",
+    "content": "Right now it says $10, 5 days shipping, but we will see more details on that when we click sourcing details. It will pull up a new tab and as you can see the bag is right here. So they got the black which actually looks really good in these photos. They got brown… which is down here. And also this dark brown… this grey… and this dark grey cloth. Which is cool and all because down the line I can add these other colors and variants into my store but there's no pink, black + brown, and white + brown.",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 7,
+    "header": "autods",
+    "content": "Which is exactly why autods added this feature here where you can message the actual supplier about this sourcing request. So you can stop and pause it here if you'd like to see what I typed out but I was pretty much just asking to see if they can find the other colors because we know they are out there. Typically once you talk to the supplier they will be able to find all the colors and all the variants but if not it just means they can't find a good price or good enough quality product for that variant. So you wouldn't really want to sell it and you would rather add the other colors they provided. So I'll click send message which will put it in the messages tab down here. But let's come back to orders, sourcing request, and sourcing details to get back on this page. You can also click request a change but it works similar to the messaging. But since I would have to wait to talk to the supplier, what i'll do is just add the 2 correct colors in how you normally would. So you can see our cost is $10.85 but also $22.47 for shipping",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 8,
+    "header": "autods",
+    "content": "right now which we can adjust by clicking right here. These will all have different shipping times and different pieces. You can see 7 days here 7 days here but they are more expensive. And anywhere around 2 weeks or less is acceptable so ill just go with this one right here as the lower price will leave us with larger profit margins. Click save for all variations and then click link product. Here is where you will be matching up the colors to the colors on our website. So I will add brown match it to the brown, add black match it to the black and",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 9,
+    "header": "autods",
+    "content": "right now for these other ones I just have to skip it until I talk to the supplier and they add those other colors I want. I'm gonna keep this box checked right here so it adds it to all unfulfilled orders like the one I placed earlier and click link product.",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 10,
+    "header": "autods",
+    "content": "Now when I come to orders you will see it says sourcing request linked which is ready for me to place the order. And since I'm buying the product and they are sending it to the customer I need to add balance here. So I'll click add balance and since I only have one order that will cost around $30 I only have to add $50 for the time being. xxxxxxxRight now I can't show the screen but I am just adding in all my credit card details. Which now has been added and I can click load balance. $50 was added so click done. And now I can click here where it says pending and press send to auto order. It is now in order progress meaning autods will order it, ship it, and deliver it to the customer for us while keeping us updated on the progress of it on this page. For example if I come on the flying spinners page I placed some test orders here",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 11,
+    "header": "autods",
+    "content": "to demonstrate this and they all now say shipped and have a tracking order on this same orders page. And I placed these orders yesterday meaning the processing time is very quick.",
+    "category": "autods",
+    "source": "course"
+  },
+  {
+    "id": 12,
+    "header": "autods",
+    "content": "The customer paid $60 for the bag so I took that $60 and bought it for $35 on autods. Now autods is sending it straight to the customer leaving me with a profit of $25. Which is the the full process of getting orders fulfilled by autods which I believe is fairly simple but if you did run into any issues along the way you can open the live chat support here in the bottom right to talk to a representative at autods and have them assist you. Or checkout this youtube video right here which I will also have linked under this video explaining every single step and feature of autods. It even has time stamps so if you got stuck on the sourcing requests step, you can just come here and watch him explain it even more in depth than I did. And although these other features are pretty self explanatory, like the marketplace, print on demand, and dashboard. If you want the full rundown on them and everything you are getting with autods, he explains it all better than I could near the start of that same video.",
+    "category": "autods",
+    "source": "course"
+  }
+]

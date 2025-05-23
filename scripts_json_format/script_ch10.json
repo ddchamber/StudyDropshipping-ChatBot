@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "header": "Intro",
+    "content": "In this section we will be explaining the various shopify apps that hypothetically aren't necessary but not using them would be holding you back in the long run. And the reason this wasn't included in the actual shopify store build is because typically for myself I do it after the store is all setup and I actually have some traction and orders on the store. This is because they do take some time to set up which I feel I wouldn't want to waste if I don't even know if the product is going to work yet.  So once some orders come in and you have the proof it works and it will be something you stick with this is when you add these apps to optimize and make sure you aren't leaving any money on the table.",
+    "category": "Shopify Apps",
+    "source": "course"
+  },
+  {
+    "id": 2,
+    "header": "Zipify OCU",
+    "content": "Starting with my personal favorite which is called One Click Upsell by Zipify. What an upsell is, is another way to have the customer add something to their order. The most common and what I typically use is after the customer places an order and has completely paid for it. Before they reach the order confirmation page, they get shown an offer to add ___ to their order for __ discount. And the reason this is so powerful is because they already have their card info, address, everything already entered in and hence the name all they have to do is one click and it will add it to their order. This doesn't hurt conversion rates or anything about your store because at this point they have already paid. The most common examples of this are to offer a different product related to the one they bought or just another of the same thing at a lower price. For example if you were selling this dish cleaning gun a good upsell would be replacement brushes because it is something they likely already will need to get. But for some products it would make sense to have 2 of them or maybe someone wants one for themselves and one as a gift. Which is exactly what I did on the flying spinners store and as you can see out of that $150k in sales I did almost $13k of that came from upsells. So once they paid they would then get presented with this page and depending on the holiday or season I would simply just change this message right here. So “add another spinner for 20% off” To where instead of $25 they could add another for $20. To where they either click pay now with one click or decline and move on. This did so well for me during the holidays and black friday because it was the gifting season so if someone bought one for one family member, odds are there's another who would want one. Or if they bought it for themselves, odds are there's someone they could also give one to. So let’s set this up together on the store we built together for the duffle bag. (live creation and installation of OCU)",
+    "category": "Shopify Apps",
+    "source": "course"
+  },
+  {
+    "id": 3,
+    "header": "SMS Bump",
+    "content": "Next up we have SMS Bump by Yotpo which is basically text message marketing but specifically what I use it for is abandoned cart automations. What this does is when someone goes from your advertising, to your website, reaches checkout, but doesnt follow through and purchase. You can set it up so a certain amount of time after they do that they get a text message giving them a percent off or discount code to use. And this is so powerful because if they already made it this far into the process of buying but pull out at the last second it is usually because of the price. So what they need is something to then push them over the edge into buying like a discount. Now again on the flying spinners store I used this and it brought in an extra $11k in sales which I would have missed out on not having this in place. One was after 5 mins and one was after an hour. With the 5 minutes being the most powerful by far because during that time they probably still had the product in their mind and were still debating on if its worth it. So when they get this customized text offering them 10% off for a lot of people this was all they needed to be like alright let me go buy it. And what's cool is this link will bring them right back to the checkout page and already have the discount applied so no extra work is needed to be done on their end. And the reason we have their phone number is because at checkout they enter it when they put in all their info. On top of these automations another feature I use is campaigns. So if it's black friday I can create a list of all the phone numbers collected and send a text with a discount to the people who never ended up purchasing. This does well too but in my opinion it is more powerful for big brands who release new items rather than just a dropshipping product. So let me show you how to setup these automations and use the platform (live setup and automation creation)",
+    "category": "Shopify Apps",
+    "source": "course"
+  },
+  {
+    "id": 4,
+    "header": "True Profit",
+    "content": "True profit is a great app to have no matter how you are advertising but it's especially useful for when you are running paid ads. What it can do is connect to your tiktok ads manager, let you insert the product cost per unit, and track the sales on shopify letting you know the real profit and percentages of what you spend is going to. I used to manually calculate these things but having it on one singular dashboard makes it way easier so you aren't just pulling out your calculator, putting in the sales then subtracting that by what you spent on the products and ads yourself. So let me show you how it looks and how you could set it up to connect to your store and the ads manager. (Live setup and integration)",
+    "category": "Shopify Apps",
+    "source": "course"
+  }
+]
