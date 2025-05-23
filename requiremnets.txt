@@ -9,3 +9,6 @@ json
 faiss-cpu
 pandas
 sentence_transformers
+faiss-cpu
+sentence-transformers 
+streamlit
