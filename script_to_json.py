@@ -5,50 +5,32 @@ import json
 file_path = "/Users/williamkapner/Downloads/CHAPTER 9 - TikTok Ads.txt"
 output_path = "script_ch9.json"
 
-# Step 1: Clean line endings and normalize spacing
 def preprocess_script(text):
     text = re.sub(r'\r\n?', '\n', text)  # Normalize line endings
     text = re.sub(r'\n{3,}', '\n\n', text.strip())  # Collapse excessive blank lines
     return text
 
-# Step 2: Chunk based on headers and paragraphs
 def chunk_script(text):
-    lines = text.splitlines()
+    paragraphs = [p.strip() for p in text.split('\n\n') if p.strip()]
     chunks = []
-    current_header = None
-    current_body = []
+    current_header = "General"  # Fallback if no header
     chunk_id = 1
 
-    def is_header(line):
-        return line.strip() != "" and line.strip().istitle()
-
-    for line in lines:
-        stripped = line.strip()
-
-        if is_header(stripped):
-            if current_header and current_body:
-                chunks.append({
-                    "chunk_id": chunk_id,
-                    "header": current_header,
-                    "content": "\n".join(current_body).strip(),
-                    "category": 'TikTok Ads',
-                    "source": 'course'
-                })
-                chunk_id += 1
-                current_body = []
-            current_header = stripped
-        elif current_header:
-            current_body.append(line)
-
-    # Final chunk
-    if current_header and current_body:
-        chunks.append({
-            "chunk_id": chunk_id,
-            "header": current_header,
-            "body": "\n".join(current_body).strip()
-        })
-
+    for para in paragraphs:
+        # Heuristic: header = short and contains no punctuation (not a sentence)
+        if len(para.split()) <= 10 and not re.search(r'[.!?]', para):
+            current_header = para
+        else:
+            chunks.append({
+                "id": chunk_id,
+                "header": current_header,
+                "content": para,
+                "category": 'TikTok Ads',
+                "source": 'course'
+            })
+            chunk_id += 1
     return chunks
+
 
 # Step 3: Format chunks into the required structure
 def format_chunks(chunked, category="TikTok Ads", source="course"):
@@ -57,7 +39,7 @@ def format_chunks(chunked, category="TikTok Ads", source="course"):
         formatted_chunk = {
             "id": i,
             "header": chunk["header"],
-            "content": chunk["body"],
+            "content": chunk["content"],
             "category": category,
             "source": source
         }
