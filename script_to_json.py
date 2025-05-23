@@ -2,38 +2,59 @@ import re
 import json
 
 # File path
-file_path = "/Users/williamkapner/Downloads/CHAPTER 9 - TikTok Ads.txt"
-output_path = "script_ch9.json"
+file_path = "/Users/williamkapner/Downloads/Autods script.txt"
+output_path = "script_autods.json"
 
 def preprocess_script(text):
     text = re.sub(r'\r\n?', '\n', text)  # Normalize line endings
     text = re.sub(r'\n{3,}', '\n\n', text.strip())  # Collapse excessive blank lines
     return text
 
-def chunk_script(text):
-    paragraphs = [p.strip() for p in text.split('\n\n') if p.strip()]
-    chunks = []
-    current_header = "General"  # Fallback if no header
-    chunk_id = 1
 
-    for para in paragraphs:
-        # Heuristic: header = short and contains no punctuation (not a sentence)
-        if len(para.split()) <= 10 and not re.search(r'[.!?]', para):
-            current_header = para
-        else:
-            chunks.append({
-                "id": chunk_id,
-                "header": current_header,
-                "content": para,
-                "category": 'TikTok Ads',
-                "source": 'course'
-            })
-            chunk_id += 1
+import re
+
+def chunk_script(text):
+    chunks = []
+    chunk_id = 1
+    current_header = "autods"
+
+    # Normalize line endings and spacing
+    text = re.sub(r'\r\n?', '\n', text).strip()
+    text = re.sub(r'\n{3,}', '\n\n', text)  # collapse excessive blank lines
+
+    # Define breakpoints using common narrative transitions
+    break_pattern = re.compile(
+        r'(?=\b(?:So if you have|To demonstrate this|Right now|So AutoDS|Now when I|The customer paid|But enough talking|Coming into shopify|Coming back to autods|Which is exactly why)\b)',
+        flags=re.IGNORECASE
+    )
+
+    blocks = re.split(break_pattern, text)
+    for block in blocks:
+        clean_block = block.strip()
+        if len(clean_block) < 150:  # avoid tiny fragments
+            continue
+
+        chunks.append({
+            "id": chunk_id,
+            "header": current_header,
+            "content": clean_block,
+            "category": "autods",
+            "source": "course"
+        })
+        chunk_id += 1
+
     return chunks
 
 
+
+
+
+
+
+
+
 # Step 3: Format chunks into the required structure
-def format_chunks(chunked, category="TikTok Ads", source="course"):
+def format_chunks(chunked, category="autods", source="course"):
     formatted_chunks = []
     for i, chunk in enumerate(chunked, start=1):
         formatted_chunk = {
