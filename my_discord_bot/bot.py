@@ -22,6 +22,7 @@ discord_token = os.getenv("DISCORD_TOKEN")
 aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
 aws_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 aws_region = os.getenv("AWS_DEFAULT_REGION")
+channel = 1375597403750797493
 
 # --- AWS Claude Setup ---
 aws_client = boto3.client(
@@ -74,6 +75,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+
+    if message.channel.id != channel:
+        return# Ignore messages not from the allowed channel
 
     try:
         user_input = message.content.strip().lower()
@@ -182,7 +186,7 @@ A:
 - They solve a problem or make life easier.
  </information>
 <goal> To identify a product that will perform well in ads and convert customers. </goal>
- <difficulty> Medium – Requires practice and testing, but tools and examples help. </difficulty>
+<difficulty> Medium – Requires practice and testing, but tools and examples help. </difficulty>
 <response> Great question — picking the right product is one of the biggest steps in getting traction with dropshipping.
 Start by looking for products that catch attention fast. Ask yourself: Would this stop me from scrolling on TikTok or Instagram? Products that are visually interesting, solve a real problem, or stir some emotion (like surprise or controversy) tend to perform the best in ads.
 Next, think about how unique the product feels. If it’s already everywhere, it’ll be tough to stand out. And finally, check the numbers — look for something you can sell for 3x what it costs you to source.
@@ -192,7 +196,7 @@ Want help brainstorming or validating a product you’re thinking about?
 </Examples>
 
 <Conversation History>
-{formatted_history}
+{formatted_conversation}
 </Conversation History>
 
 <User Question and Information from database>
@@ -200,12 +204,9 @@ A user just asked this question:
 "{user_question}"
 
 Relevant Threads:
-{top_threads}
+{formatted_history}
 </User Question and Information from database>
 
-Relevant Threads:
-{top_threads}
-</User Question and Information from database>
 
 <Reiteration>
 You are a friendly, professional dropshipper who wants to grow the community through free, helpful, and clear advice. Be excited to help, break things down step-by-step, and always aim to get the user closer to taking action.
