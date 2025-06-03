@@ -2,13 +2,12 @@ import discord
 import sqlite3
 import numpy as np
 import os
-from sentence_transformers import SentenceTransformer
+#from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from dotenv import load_dotenv
-import torch
 import boto3
-
-torch.set_num_threads(1)
+from TitanEmbeddings import TitanEmbeddings, generate_titan_vector_embedding
+# ssh -i /Users/dan/Downloads/discord-bot.pem ec2-user@35.171.22.127
 
 # --- Z-score filter ---
 def calculate_zscores(cosine_scores):
@@ -33,6 +32,7 @@ aws_client = boto3.client(
 )
 
 model_id = "anthropic.claude-3-haiku-20240307-v1:0"
+
 model_kwargs = {
     "max_tokens": 2048,
     "temperature": 0.0,
@@ -50,7 +50,7 @@ intents.message_content = True
 client = discord.Client(intents=intents)
 
 # Load embeddings & index map
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = TitanEmbeddings(boto3_client=aws_client)
 
 embeddings = np.load("models/embeddings.npy")  # shape: (N, 384), already normalized
 with open("models/id_map.txt") as f:
@@ -104,7 +104,7 @@ async def on_message(message):
         user_question = message.content.strip()
         print(f"New user question: {user_question}")
 
-        query_emb = model.encode(user_question).reshape(1, -1)
+        query_emb = generate_titan_vector_embedding(user_question).reshape(1, -1)
         query_emb = query_emb / np.linalg.norm(query_emb)
 
         print("Calculating cosine similarity")
@@ -138,7 +138,7 @@ async def on_message(message):
 
         formatted_history = "\n\n".join([f"Closest Q: {header}\nA: {content}" for header, content in filtered_threads])
 
-        # 🔁 Store results for reuse by /show_context
+        # Store results for reuse by /show_context
         last_query_data["question"] = user_question
         last_query_data["top_threads"] = top_threads
         last_query_data["z_scores"] = z_scores
@@ -210,7 +210,7 @@ Relevant Threads:
 
 <Reiteration>
 You are a friendly, professional dropshipper who wants to grow the community through free, helpful, and clear advice. Be excited to help, break things down step-by-step, and always aim to get the user closer to taking action.
-Only return the <response> without the tags.
+Only return the <response> without the tags. Make sure the message sent to discord is less than 2000 characters.
 </Reiteration>
 """  
         print("Calling Claude")
